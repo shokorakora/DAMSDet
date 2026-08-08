@@ -1,0 +1,7 @@
+coco_pretrain_weights.pdparams
+*.pyc
+dataset/
+ppdet/__pycache__/
+ppdet/data/__pycache__/
+ppdet/data/crop_utils/__pycache__/
+ppdet/data/__pycache__/

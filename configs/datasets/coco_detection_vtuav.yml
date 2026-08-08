@@ -1,0 +1,23 @@
+metric: COCO
+num_classes: 5
+
+TrainDataset:
+  name: Mutisprctral_COCODataSet
+  vis_image_dir: train_vis_img
+  ir_image_dir : train_ir_img
+  anno_path: annotations/train.json
+  dataset_dir: dataset/coco_vtuav
+  data_fields: ['image', 'gt_bbox', 'gt_class', 'is_crowd']
+
+EvalDataset:
+  name: Mutisprctral_COCODataSet
+  vis_image_dir: val_vis_img
+  ir_image_dir: val_vis_img  # ※評価用データセットのIR側フォルダ名に合わせる
+  anno_path: annotations/val.json
+  dataset_dir: dataset/coco_vtuav
+  allow_empty: true
+
+TestDataset:
+  name: Multi_ImageFolder
+  anno_path: annotations/label_list.txt
+  dataset_dir: dataset/coco_vtuav
